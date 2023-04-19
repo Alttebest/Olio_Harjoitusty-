@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    android:layout_height="180dp"
+    android:layout_marginTop="10dp"
+    android:background="#8780F1"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/ivLutemonImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtNameColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nimi(väri)"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAttack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Hyökkäys: " />
+
+        <TextView
+            android:id="@+id/txtDefense"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Puolustus: " />
+
+        <TextView
+            android:id="@+id/txtHealth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Elämä: " />
+
+        <TextView
+            android:id="@+id/txtExperience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kokemus: " />
+
+        <TextView
+            android:id="@+id/txtWins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Voittoja: " />
+
+        <TextView
+            android:id="@+id/txtLosses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Häviöitä: " />
+
+        <TextView
+            android:id="@+id/txtDaysTrained"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Treenipäiviä: " />
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>
