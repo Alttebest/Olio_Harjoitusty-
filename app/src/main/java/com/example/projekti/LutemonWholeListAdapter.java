@@ -29,13 +29,13 @@ public class LutemonWholeListAdapter extends RecyclerView.Adapter<LutemonWholeVi
     public void onBindViewHolder(@NonNull LutemonWholeViewHolder holder, int position) {
         holder.lutemonImage.setImageResource(lutemons.get(position).getImage());
         holder.nameColor.setText(lutemons.get(position).getName());
-        holder.attack.append(String.valueOf(lutemons.get(position).getAttack()));
-        holder.defense.append(String.valueOf(lutemons.get(position).getDefense()));
-        holder.health.append(lutemons.get(position).getHealth() + "/" + lutemons.get(position).getMaxHealth());
-        holder.experience.append(String.valueOf(lutemons.get(position).getExperience()));
-        holder.wins.append(String.valueOf(lutemons.get(position).getWins()));
-        holder.losses.append(String.valueOf(lutemons.get(position).getLosses()));
-        holder.daysTrained.append(String.valueOf(lutemons.get(position).getDaysTrained()));
+        holder.attack.setText("Hyökkäys: " + lutemons.get(position).getAttack());
+        holder.defense.setText("Puolustus: " + lutemons.get(position).getDefense());
+        holder.health.setText("Elämä: " + lutemons.get(position).getHealth() + "/" + lutemons.get(position).getMaxHealth());
+        holder.experience.setText("Kokemus: " + lutemons.get(position).getExperience());
+        holder.wins.setText("Voittoja: " + lutemons.get(position).getWins());
+        holder.losses.setText("Häviöitä: " + lutemons.get(position).getLosses());
+        holder.daysTrained.setText("Treenipäiviä: " + lutemons.get(position).getDaysTrained());
     }
 
     @Override
