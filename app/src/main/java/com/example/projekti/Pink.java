@@ -11,6 +11,5 @@ public class Pink extends Lutemon{
         this.defense = 3;
         this.maxHealth = 18;
         this.health = 18;
-        this.id = getNumberOfCreatedLutemons();
     }
 }

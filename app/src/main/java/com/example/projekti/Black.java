@@ -11,6 +11,5 @@ public class Black extends Lutemon{
         this.defense = 0;
         this.maxHealth = 16;
         this.health = 16;
-        this.id = getNumberOfCreatedLutemons();
     }
 }

@@ -45,6 +45,6 @@ public class AddLutemonActivity extends AppCompatActivity {
         else {
             throw new IllegalStateException("Unexpected value: " + rgAddLutemon.getCheckedRadioButtonId());
         }
-        Home.getInstance().saveLutemons(context);
+        MainActivity.saveLutemons(context);
     }
 }

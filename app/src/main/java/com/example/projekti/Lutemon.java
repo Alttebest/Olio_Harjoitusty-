@@ -2,17 +2,17 @@ package com.example.projekti;
 
 import java.io.Serializable;
 
-public class Lutemon implements Serializable {
+public abstract class Lutemon implements Serializable {
     protected String name, color;
     protected int experience = 0;
     protected int wins = 0;
     protected int losses = 0;
     protected int daysTrained = 0;
-    private int idCounter = 0;
+    private static int idCounter = 0;
     protected int attack, defense, health, maxHealth, id, image;
 
     public Lutemon(){
-        idCounter++;
+        id = ++idCounter;
     }
 
     public void defense(Lutemon lutemon){
@@ -21,10 +21,6 @@ public class Lutemon implements Serializable {
 
     public int attack(){
         return attack;
-    }
-
-    public int getNumberOfCreatedLutemons(){
-        return idCounter;
     }
 
     public String getName(){
@@ -50,8 +46,7 @@ public class Lutemon implements Serializable {
     }
 
     public String printSpecs(){
-        String message = (id + ": " + color + "(" + name + ")" + " att " + attack + "; def: " + defense + "; exp: " + experience + "; health: " + health + "/" + maxHealth);
-        return message;
+        return id + ": " + color + "(" + name + ")" + " att " + attack + "; def: " + defense + "; exp: " + experience + "; health: " + health + "/" + maxHealth;
     }
 
     public int getImage() {
@@ -88,5 +83,13 @@ public class Lutemon implements Serializable {
 
     public int getMaxHealth() {
         return maxHealth;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Lutemon getLutemon(){
+        return this;
     }
 }

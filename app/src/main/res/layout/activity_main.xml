@@ -46,4 +46,15 @@
         android:text="Taisteluareenalle"
         app:layout_constraintStart_toStartOf="@+id/btnChangeToMoveLutemons"
         app:layout_constraintTop_toBottomOf="@+id/btnChangeToMoveLutemons" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="341dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Ohjelmassa voit luoda lutemoneja, siirrellä niitä, sekä laittaa ne taistelemaan keskenään. Listaamalla lutemonit näet niiden tiedot ja tilastot. Taistellaksesi Lutemoneilla vähintään kahden tulee olla taisteluareenalla. Taistelun voittaja saa kokemuspisteen ja häviäjä siirtyy takaisin kotiin nuolemaan näppejään. Taistelun aikana myös jokainen treenaamassa oleva lutemoni saa kokemuspisteen. Vain kotona olevat lutemonit tallentuvat, joten muistathan siirtää lutemonit sinne lopettaessasi pelaamisen."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnChangeToBattlefield" />
 </androidx.constraintlayout.widget.ConstraintLayout>

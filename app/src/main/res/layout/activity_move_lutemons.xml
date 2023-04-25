@@ -12,38 +12,71 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_marginStart="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtAtHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kotona:" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvMoveLutemons"
+                android:id="@+id/rvMoveLutemonsFromHome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="28dp">
+                android:layout_marginTop="10dp">
 
             </androidx.recyclerview.widget.RecyclerView>
 
-            <RadioGroup
-                android:id="@+id/radioGroup2"
+            <TextView
+                android:id="@+id/txtAtTraining"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Treenaamassa:" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMoveLutemonsFromTraining"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
+                android:layout_marginTop="10dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/txtAtArena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Taisteluareenalla:" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMoveLutemonsFromArena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <RadioGroup
+                android:id="@+id/rgMoveLutemons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="25dp">
 
                 <RadioButton
-                    android:id="@+id/rbKoti"
+                    android:id="@+id/rbToHome"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Kotiin" />
 
                 <RadioButton
-                    android:id="@+id/rbTreeniareena"
+                    android:id="@+id/rbToTrainingArea"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Treenaamaan" />
 
                 <RadioButton
-                    android:id="@+id/rbAreenalle"
+                    android:id="@+id/rbToBattlefield"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Taisteluareenalle" />
@@ -53,8 +86,9 @@
                 android:id="@+id/btnMoveLutemons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="110dp"
+                android:layout_marginStart="60dp"
                 android:layout_marginTop="44dp"
+                android:onClick="moveLutemons"
                 android:text="Siirrä valitut Lutemonit" />
 
         </LinearLayout>

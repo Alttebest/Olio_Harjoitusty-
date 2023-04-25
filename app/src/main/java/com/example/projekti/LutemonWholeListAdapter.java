@@ -11,8 +11,8 @@ import java.util.ArrayList;
 
 public class LutemonWholeListAdapter extends RecyclerView.Adapter<LutemonWholeViewHolder>{
 
-    private Context context;
-    private ArrayList<Lutemon> lutemons = new ArrayList<>();
+    final private Context context;
+    final private ArrayList<Lutemon> lutemons;
 
     public LutemonWholeListAdapter(Context context, ArrayList<Lutemon> lutemons) {
         this.context = context;
@@ -31,7 +31,7 @@ public class LutemonWholeListAdapter extends RecyclerView.Adapter<LutemonWholeVi
         holder.nameColor.setText(lutemons.get(position).getName());
         holder.attack.append(String.valueOf(lutemons.get(position).getAttack()));
         holder.defense.append(String.valueOf(lutemons.get(position).getDefense()));
-        holder.health.append(String.valueOf(lutemons.get(position).getHealth()) + "/" + String.valueOf(lutemons.get(position).getMaxHealth()));
+        holder.health.append(lutemons.get(position).getHealth() + "/" + lutemons.get(position).getMaxHealth());
         holder.experience.append(String.valueOf(lutemons.get(position).getExperience()));
         holder.wins.append(String.valueOf(lutemons.get(position).getWins()));
         holder.losses.append(String.valueOf(lutemons.get(position).getLosses()));

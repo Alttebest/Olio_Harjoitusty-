@@ -26,8 +26,13 @@ public class Battlefield extends Storage{
                 b.defense(a);
                 message += a.getName() + " hyökkää ja " + b.getName() + " puolustautuu." + "\n";
                 if (b.health <= 0){
-                    message += b.getName() + " kuolee." + "\n";
+                    message += b.getName() + " häviää ja siirretään kotiin lepäämään." + "\n";
                     message += "Taistelu on ohi." + "\n";
+                    a.win();
+                    b.lose();
+                    Battlefield.getInstance().removeLutemon(b);
+                    Home.getInstance().addLutemon(b);
+                    break;
                 } else {
                     message += b.getName() + " välttää kuoleman!" + "\n";
                 }
@@ -38,8 +43,13 @@ public class Battlefield extends Storage{
                 a.defense(b);
                 message += b.getName() + " hyökkää ja " + a.getName() + " puolustautuu." + "\n";
                 if (a.health <= 0){
-                    message += a.getName() + " kuolee." + "\n";
+                    message += a.getName() + " häviää ja siirretään kotiin lepäämään." + "\n";
                     message += "Taistelu on ohi." + "\n";
+                    b.win();
+                    a.lose();
+                    Battlefield.getInstance().removeLutemon(a);
+                    Home.getInstance().addLutemon(a);
+                    break;
                 } else {
                     message += a.getName() + " välttää kuoleman!" + "\n";
                 }

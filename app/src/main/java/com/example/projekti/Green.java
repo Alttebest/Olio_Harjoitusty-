@@ -11,6 +11,5 @@ public class Green extends Lutemon{
         this.defense = 3;
         this.maxHealth = 19;
         this.health = 19;
-        this.id = getNumberOfCreatedLutemons();
     }
 }

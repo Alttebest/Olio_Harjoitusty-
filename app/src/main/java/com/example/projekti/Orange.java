@@ -7,10 +7,9 @@ public class Orange extends  Lutemon{
         this.name = name;
         this.image = R.drawable.oranssi;
         this.color = "Oranssi";
-        this.attack = 7;
-        this.defense = 2;
-        this.maxHealth = 18;
-        this.health = 18;
-        this.id = getNumberOfCreatedLutemons();
+        this.attack = 8;
+        this.defense = 1;
+        this.maxHealth = 17;
+        this.health = 17;
     }
 }
