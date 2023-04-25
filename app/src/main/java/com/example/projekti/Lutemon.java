@@ -20,7 +20,7 @@ public abstract class Lutemon implements Serializable {
     }
 
     public int attack(){
-        return attack;
+        return (int) (attack+ Math.random()*5);
     }
 
     public String getName(){
